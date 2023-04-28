@@ -5,35 +5,36 @@
 
     <style>
         body {
-            /* background-image: url(https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/cW5lDBG/videoblocks-abstract-programming-code-moves-in-the-camera-software-development-concept_s0fm20jshg_thumbnail-1080_01.png); */
+            background-image: url(https://cdn.wallpapersafari.com/98/64/9xl467.jpg);
             background-size: cover;
             font-family: DejaVu Sans Mono, monospace;
-            background-color: rgb(70, 88, 97);
+            /* background-color: rgb(70, 88, 97); */
             color: white;
             
         }
         h1 {
-            font-size: 50px;
-            color: aqua;
-            margin-top: 0;
-            
+            /* font-size: 50px; */
+            color: rgb(67, 73, 95);
         }
         .container{
             opacity: 0.9;
+
         }
 
         .content{
+            display: flex;
             width: 66%;
             background-color: black;
             margin-right: auto;
             margin-left: auto;
-            height: 98vh;
+            height: 78vh;
         }
 
         .sidebar {
             width: 33%;
-            height: 98vh;
-            background-color: rgb(67, 73, 95);
+            height: 78vh;
+            /* background-color: rgb(67, 73, 95); */
+            background-color: black;
             float: left;
         }
         .main{
@@ -42,8 +43,9 @@
             height: 98vh;
             float: right;
             
+            
         }
-     .imground {
+        .imground {
             border-radius: 50%;
             display: block;
             
@@ -55,9 +57,12 @@
             align-items: center;
         }
         .navbar {
+            display: flex;
             width: 100%;
             height: 10%;
-            text-align: center;
+            /* background-color: aqua; */
+            align-items: center;
+            margin-top: 0;
         }
 
         li {
@@ -66,24 +71,35 @@
         }
         .bottom {
             display: block;
-            height: 10%;
             width: 100%;
-            float: bottom;
-            background-color: aqua;
+            height: 5%;
+            background-color: black;
+            /* vertical-align: middle; */
+            text-align: center;
+
         } 
         .btn {
-                background-color: black; /* Green */
+                background-color: black; 
                 color: white;
-                padding: 15px 32px;
+                padding: 5px 20px;
                 text-align: center;
-                text-decoration: none;
-                display: inline-block;
                 font-size: 14px;
-                /* margin: 4px 2px; */
+                text-decoration: none;
                 cursor: pointer;
-                border: 2px solid white;
+                border: 1px solid white;
+                border-radius: 20px;
+                font-family: DejaVu Sans Mono, monospace;
+                margin: 10px 10px;
                 }   
-        
+        .btn a {
+            text-decoration: none;
+        }
+        .myspan{
+            padding-left: 10px;
+            display: block;
+        }
+
+
     </style>
 
     </head>
@@ -94,33 +110,35 @@
         <div class="content">
             <div class="sidebar">
                 <div class="imgwrapper">
-                    <img class="imground" src="https://tse2.mm.bing.net/th?id=OIP.zx_iPrOl3ktdTOOHwBw09gHaHa&pid=Api&P=0" alt="" style="width:70%;">
+                    <img class="imground" src="https://scontent.fceb1-2.fna.fbcdn.net/v/t39.30808-6/278223525_712412489948954_2895976038892857502_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGrx5wKFIKJRLLq7Qll0nBOwPvmitq_snXA--aK2r-ydXoCftPqB1MqMypkYvh9PL5pVRt-EGKYANb0uCQ9wLVH&_nc_ohc=_qkKIzlqh3MAX8oAoF2&_nc_ht=scontent.fceb1-2.fna&oh=00_AfB30KSnv2fqp7j50YQF4xp-0xByJcBG2a2eHV9NBJNqoA&oe=6450A676" alt="" style="width:60%;height: 70%;">
                 </div>
                 <div style="padding-left: 10%;">
-                    <h3 style="margin-bottom: 0;margin-top: 0;">DICT Stacktrek Trainee</h3>
-                    <h1><i>Hi, I'm Cris</i></h1>
+                    <h3 style="margin-bottom: 0;margin-top: 0;">Computer Engineer</h3>
+                    <h1 style="margin-top: 0;"><i>Hi, I'm Cris</i></h1>
+                </div>
+                <div>
+
                 </div>
                 
             </div>
             <div class="main">
                 <div class="navbar">
-                    <ul>
-                        <li>About Me</li>
-                        <li>Project</li>
-                        <li>Contact</li>
-                    </ul>
+                   <h1>Portfolio</h1>
                 </div>
-                <div style="height: 80%; background-color: azure;display: block;">
-
+                <div style="height: 56%; background-color: black;display: block;margin: 3%;">
+                            <span class="myspan"><b>FULLNAME: </b> Cris Vincent G. Ferrer</span>
+                            <span class="myspan"><b>DEGREE: </b> BS Computer Engineering</span>
+                            <span class="myspan"><b>BORN: </b> November 16, 1994</span>
+                            <br>
+                            <span class="myspan"><b>EXPERIENCE: </b> 3 years Windows Application Developer</span>
+                            <span class="myspan"><b>PROJECTS: </b> Biometrics, Queuing System, Inventory</span>
+                            <span class="myspan"><b>PROGRAMMING LANGUAGE: </b> CSharp</span>
                 </div>
 
                 <div class="bottom">
-                    <button class="btn">Facebook</button>
-                    <button class="btn">Email</button>
-                    <button class="btn">Github</button>
-                    <button class="btn">Email</button>
-                    <button class="btn">TEST</button>
-                    
+                    <button class="btn"><a href="https://www.facebook.com/chris.tui.184" target="_blank" rel="noopener noreferrer">Facebook</a></button>
+                    <button class="btn"><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener noreferrer">Gmail</a></button>
+                    <button class="btn"><a href="https://github.com/cvin-f" target="_blank" rel="noopener noreferrer">Github</a></button>
                 </div>
                 
                 
