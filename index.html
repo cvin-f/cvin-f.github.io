@@ -133,7 +133,7 @@
                   <th scope="col">#</th>
                   <th scope="col">Porject Name</th>
                   <th scope="col">Date Deployed</th>
-                  <th scope="col">Language Use</th>
+                  <th scope="col">Programming Language</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
@@ -143,28 +143,28 @@
                   <td>Spider Web</td>
                   <td>February 30, 2023</td>
                   <td>Python</td>
-                  <td><button onclick="openProject()" class="btn btn-primary btn-sm" name="">View</button></td>
+                  <td><button onclick="openProject(1)" data-bs-target="#modal_project" data-bs-toggle="modal" class="btn btn-primary btn-sm" name="">View</button></td>
                 </tr>
                 <tr>
                   <td>2</td>
                   <td>ChargeDotcom</td>
                   <td>August 1, 2023</td>
                   <td>Python</td>
-                  <td><button onclick="openProject()" class="btn btn-primary btn-sm">View</button></td>
+                  <td><button onclick="openProject(2)" data-bs-target="#modal_project" data-bs-toggle="modal" class="btn btn-primary btn-sm">View</button></td>
                 </tr>
                 <tr>
                   <td>3</td>
                   <td>Jurasik</td>
                   <td>200AC</td>
                   <td>Arabic</td>
-                  <td><button class="btn btn-primary btn-sm">View</button></td>
+                  <td><button data-bs-target="#modal_project" data-bs-toggle="modal" class="btn btn-primary btn-sm">View</button></td>
                 </tr>
                 <tr>
                   <td>4</td>
                   <td>Kokey</td>
                   <td>04*9_s93*:0@</td>
                   <td>Alien</td>
-                  <td><button class="btn btn-primary btn-sm">View</button></td>
+                  <td><button data-bs-target="#modal_project" data-bs-toggle="modal" class="btn btn-primary btn-sm">View</button></td>
                 </tr>
               </tbody>
             </table>
@@ -210,26 +210,21 @@
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="project-title">Sample Title</h5>
+            <h5 class="modal-title" id="project-title">Title</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <div class="mb-3">
-              <label for="contact-name" class="col-form-label">Name :</label>
+            <h4 id="project-date"> Date Deployed:</h4>
+            <h4 id="project-language"> Programming Language:</h4>
+            <!-- <div class="mb-3">
+              <label for="project-date" class="col-form-label">Date Deployed :</label>
               <input type="text" class="form-control" id="contact-name">
             </div>
             <div class="mb-3">
-              <label for="contact-no" class="col-form-label">Contact No :</label>
+              <label for="project-language" class="col-form-label">Programming Language :</label>
               <input type="text" class="form-control" id="contact-no">
-            </div>
-            <div class="mb-3">
-              <label for="contact-email" class="col-form-label">Email :</label>
-              <input type="email" class="form-control" id="contact-email">
-            </div>
-            <div class="mb-3">
-              <label for="message-text" class="col-form-label">Message :</label>
-              <textarea class="form-control" id="message-text"></textarea>
-            </div>
+            </div> -->
+            <hr>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -239,17 +234,26 @@
       </div>
     </div>
 
-    <script>
+    <script >
 
         var modalproject=document.getElementById("modal_project");
         var project_table=document.getElementById("project_table");
-        
+        var btn= document.getElementsByClassName("btn");
 
-      function openProject(){
-        var oCells = project_table.rows.item().cells;
-        var cellLength = oCells.length;
-          
-        }
+        // btn.addEventListener("click", ()=> {
+
+         
+        // })
+
+      function openProject(trow){
+        var oCells = project_table.rows.item(trow).cells;
+        document.getElementById("project-title").innerHTML += oCells[0].innerHTML;
+        document.getElementById("project-date").innerHTML +=oCells[1].innerHTML ;
+        document.getElementById("project-language").innerHTML +=oCells[2].innerHTML ;
+
+        
+        
+      }
       
       
 
